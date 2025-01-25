@@ -138,9 +138,9 @@ const AdminSharedBotAnalyticsPage: React.FC = () => {
               </Button>
             </div>
 
-            <div className="mt-2 border-b border-gray"></div>
+            <div className="mt-2 border-b border-aws-gray-french"></div>
 
-            <div className="h-4/5 overflow-x-hidden overflow-y-scroll border-b border-gray pr-1 scrollbar-thin scrollbar-thumb-aws-font-color-light/20 dark:scrollbar-thumb-aws-font-color-dark/20">
+            <div className="h-4/5 overflow-x-hidden overflow-y-scroll border-b border-aws-gray-french pr-1 scrollbar-thin scrollbar-thumb-aws-blue-navy/20 dark:scrollbar-thumb-aws-gray-light/20">
               {isLoadingPublicBots && (
                 <div className="flex flex-col gap-2">
                   {new Array(15).fill('').map((_, idx) => {
@@ -150,7 +150,7 @@ const AdminSharedBotAnalyticsPage: React.FC = () => {
               )}
 
               {publicBots?.length === 0 && (
-                <div className="flex size-full items-center justify-center italic text-dark-gray dark:text-light-gray">
+                <div className="flex size-full items-center justify-center italic text-aws-gray-grayish dark:text-aws-gray-ice">
                   {t('admin.sharedBotAnalytics.label.noPublicBotUsages')}
                 </div>
               )}

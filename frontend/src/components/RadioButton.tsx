@@ -16,9 +16,9 @@ type Props = BaseProps & {
 };
 
 const variantStyles: Record<RadioButtonVariant, string> = {
-  default: 'border-aws-font-color-light/50 dark:border-aws-font-color-dark/50 after:bg-aws-sea-blue-light dark:after:bg-aws-sea-blue-dark',
-  outlined: 'border-gray-300 dark:border-aws-font-color-dark after:bg-aws-sea-blue-light dark:after:bg-aws-sea-blue-dark',
-  colored: 'border-aws-sea-blue-light dark:border-aws-sea-blue-dark after:bg-aws-sea-blue-light dark:after:bg-aws-sea-blue-dark',
+  default: 'border-aws-blue-navy/50 dark:border-aws-gray-light/50 after:bg-aws-blue-teal dark:after:bg-aws-gray',
+  outlined: 'border-gray-300 dark:border-aws-gray-light after:bg-aws-blue-teal dark:after:bg-aws-gray',
+  colored: 'border-aws-blue-teal dark:border-aws-gray after:bg-aws-blue-teal dark:after:bg-aws-gray',
 };
 
 const RadioButton: React.FC<Props> = ({
@@ -62,7 +62,7 @@ const RadioButton: React.FC<Props> = ({
               'after:absolute after:left-1/2 after:top-1/2 after:h-3 after:w-3 after:rounded-full after:-translate-x-1/2 after:-translate-y-1/2',
               'after:transition-all after:content-[""]',
               variantStyles[variant],
-              'dark:bg-aws-ui-color-dark peer-checked:border-aws-sea-blue-light dark:after:bg-white dark:peer-checked:border-white peer-checked:after:opacity-100',
+              'dark:bg-aws-black-jet peer-checked:border-aws-blue-teal dark:after:bg-white dark:peer-checked:border-white peer-checked:after:opacity-100',
               'after:opacity-0',
               disabled ? 'opacity-30' : 'hover:brightness-90'
             )}
@@ -70,12 +70,12 @@ const RadioButton: React.FC<Props> = ({
         </div>
         {label && (
           <div className="grow">
-            <div className="text-sm dark:text-aws-font-color-dark">{label}</div>
+            <div className="text-sm dark:text-aws-gray-light">{label}</div>
           </div>
         )}
       </label>
       {hint && (
-        <div className="ml-8 w-full pl-2 text-xs text-gray">{hint}</div>
+        <div className="ml-8 w-full pl-2 text-xs text-aws-gray-french">{hint}</div>
       )}
     </div>
   );

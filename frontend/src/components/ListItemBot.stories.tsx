@@ -74,9 +74,9 @@ export const MyBots = () => {
   const { t } = useTranslation();
   const [myBots, setMyBots] = useState(bots);
   return (
-    <div className="h-4/5 overflow-x-hidden overflow-y-scroll border-b border-gray pr-1 scrollbar-thin scrollbar-thumb-aws-font-color-light/20 dark:scrollbar-thumb-aws-font-color-dark/20">
+    <div className="h-4/5 overflow-x-hidden overflow-y-scroll border-b border-aws-gray-french pr-1 scrollbar-thin scrollbar-thumb-aws-blue-navy/20 dark:scrollbar-thumb-aws-gray-light/20">
       {myBots.length === 0 && (
-        <div className="flex size-full items-center justify-center italic text-dark-gray dark:text-light-gray">
+        <div className="flex size-full items-center justify-center italic text-aws-gray-grayish dark:text-aws-gray-ice">
           {t('bot.label.noBots')}
         </div>
       )}
@@ -113,7 +113,7 @@ export const MyBots = () => {
             <div className="mr-5">
               {bot.isPinned ? (
                 <ButtonIcon disabled={!bot.available} onClick={() => {}}>
-                  <PiStarFill className="text-aws-aqua" />
+                  <PiStarFill className="text-aws-blue-cerulean" />
                 </ButtonIcon>
               ) : (
                 <ButtonIcon disabled={!bot.available} onClick={() => {}}>
@@ -139,7 +139,7 @@ export const MyBots = () => {
                   {t('bot.button.apiSettings')}
                 </PopoverItem>
                 <PopoverItem
-                  className="font-bold text-red"
+                  className="font-bold text-aws-red"
                   onClick={() => {
                     setMyBots((current) =>
                       current.filter((value) => value.id !== bot.id)
@@ -161,9 +161,9 @@ export const RecentlyUsedSharedBots = () => {
   const { t } = useTranslation();
   const [recentlyUsedSharedBots, setRecentlyUsedSharedBots] = useState(bots);
   return (
-    <div className="h-4/5 overflow-y-scroll border-b border-gray  pr-1 scrollbar-thin scrollbar-thumb-aws-font-color-light/20 dark:scrollbar-thumb-aws-font-color-dark/20">
+    <div className="h-4/5 overflow-y-scroll border-b border-aws-gray-french  pr-1 scrollbar-thin scrollbar-thumb-aws-blue-navy/20 dark:scrollbar-thumb-aws-gray-light/20">
       {recentlyUsedSharedBots.length === 0 && (
-        <div className="flex size-full items-center justify-center italic text-dark-gray dark:text-light-gray">
+        <div className="flex size-full items-center justify-center italic text-aws-gray-grayish dark:text-aws-gray-ice">
           {t('bot.label.noBotsRecentlyUsed')}
         </div>
       )}
@@ -175,7 +175,7 @@ export const RecentlyUsedSharedBots = () => {
           className="last:border-b-0">
           {bot.isPinned ? (
             <ButtonIcon disabled={!bot.available} onClick={() => {}}>
-              <PiStarFill className="text-aws-aqua" />
+              <PiStarFill className="text-aws-blue-cerulean" />
             </ButtonIcon>
           ) : (
             <ButtonIcon disabled={!bot.available} onClick={() => {}}>
@@ -183,7 +183,7 @@ export const RecentlyUsedSharedBots = () => {
             </ButtonIcon>
           )}
           <ButtonIcon
-            className="text-red"
+            className="text-aws-red"
             onClick={() => {
               setRecentlyUsedSharedBots((current) =>
                 current.filter((value) => value.id !== bot.id)
@@ -218,7 +218,7 @@ export const ApiManagement = () => {
     },
   ];
   return (
-    <div className="h-4/5 overflow-x-hidden overflow-y-scroll border-b border-gray pr-1 scrollbar-thin scrollbar-thumb-aws-font-color-light/20 dark:scrollbar-thumb-aws-font-color-dark/20">
+    <div className="h-4/5 overflow-x-hidden overflow-y-scroll border-b border-aws-gray-french pr-1 scrollbar-thin scrollbar-thumb-aws-blue-navy/20 dark:scrollbar-thumb-aws-gray-light/20">
       {botApis?.map((api, idx) => (
         <ListItemBot key={idx} bot={api} onClick={() => {}}>
           <div className="flex flex-col items-end gap-2">
@@ -277,7 +277,7 @@ export const Analytics = () => {
     },
   ];
   return (
-    <div className="h-4/5 overflow-x-hidden overflow-y-scroll border-b border-gray pr-1 scrollbar-thin scrollbar-thumb-aws-font-color-light/20 dark:scrollbar-thumb-aws-font-color-dark/20">
+    <div className="h-4/5 overflow-x-hidden overflow-y-scroll border-b border-aws-gray-french pr-1 scrollbar-thin scrollbar-thumb-aws-blue-navy/20 dark:scrollbar-thumb-aws-gray-light/20">
       {sortedBots?.map((bot, idx) => (
         <ListItemBot key={idx} bot={bot} onClick={() => {}}>
           <div className="relative flex h-full items-center">

@@ -172,7 +172,7 @@ const KnowledgeFileUploader: React.FC<Props> = (props) => {
         onDragOver={onDragOver}
         onDrop={onDrop}
         className={twMerge(
-          'flex h-full w-full flex-col items-center justify-center gap-3 rounded border-4 border-gray text-dark-gray dark:text-light-gray',
+          'flex h-full w-full flex-col items-center justify-center gap-3 rounded border-4 border-gray text-aws-gray-grayish dark:text-aws-gray-ice',
           props.disabled && 'opacity-50 cursor-not-allowed',
           props.className
         )}>
@@ -205,18 +205,18 @@ const KnowledgeFileUploader: React.FC<Props> = (props) => {
               <div className="flex items-center gap-2">
                 <div className="ml-auto whitespace-nowrap">
                   {file.status === 'UPLOADING' && (
-                    <div className="text-sm text-dark-gray dark:text-light-gray">
+                    <div className="text-sm text-aws-gray-grayish dark:text-aws-gray-ice">
                       {t('bot.label.fileUploadStatus.uploading')}
                       <Progress progress={file.progress ?? 0} />
                     </div>
                   )}
                   {file.status === 'UPLOADED' && (
-                    <div className="text-sm font-bold text-dark-gray dark:text-light-gray">
+                    <div className="text-sm font-bold text-aws-gray-grayish dark:text-aws-gray-ice">
                       {t('bot.label.fileUploadStatus.uploaded')}
                     </div>
                   )}
                   {file.status === 'ERROR' && (
-                    <div className="flex items-center gap-1 text-sm font-bold text-red">
+                    <div className="flex items-center gap-1 text-sm font-bold text-aws-red">
                       <PiWarningCircleFill />
                       {t('bot.label.fileUploadStatus.error')}
                     </div>
@@ -224,7 +224,7 @@ const KnowledgeFileUploader: React.FC<Props> = (props) => {
                 </div>
                 <div>
                   <ButtonIcon
-                    className="text-red"
+                    className="text-aws-red"
                     disabled={file.status === 'UPLOADING' || props.disabled}
                     onClick={() => {
                       onDeleteFile(idx);
@@ -235,8 +235,8 @@ const KnowledgeFileUploader: React.FC<Props> = (props) => {
               </div>
             </div>
             {file.errorMessage && (
-              <div className="rounded border border-dark-gray bg-light-gray px-2 py-1 text-sm ">
-                <div className="font-bold text-red">
+              <div className="rounded border border-aws-gray-grayish bg-aws-gray-ice px-2 py-1 text-sm ">
+                <div className="font-bold text-aws-red">
                   {t('bot.label.uploadError')}
                 </div>
                 <div className="italic">{file.errorMessage}</div>

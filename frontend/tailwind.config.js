@@ -15,45 +15,40 @@ export default {
         fastPulse: 'pulse 0.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       colors: {
-        'aws-squid-ink': {
-          light: '#232F3E',
-          dark: '#171717',
+        'aws-white': {
+          DEFAULT: '#ffffff',
+          smoke: '#f1f3f3',
+          silver: '#ececec',
         },
-        'aws-sea-blue': {
-          light: '#005276',
-          dark: '#757575',
+        'aws-red': {
+          DEFAULT: '#dc2626',
         },
-        'aws-sea-blue-hover': {
-          light: '#003550',
-          dark: '#5b5b5b',
+        'aws-yellow': {
+          DEFAULT: '#f59e0b',
         },
-        'aws-aqua': '#007faa',
-        'aws-lab': '#38ef7d',
-        'aws-mist': '#9ffcea',
-        'aws-font-color': {
-          light: '#232F3E',
-          dark: '#cacaca',
-          gray: '#909193',
-          blue: '#276cc6',
+        'aws-blue': {
+          DEFAULT: '#',
+          deepteal: '#003550',
+          teal: '#005276',
+          cerulean: '#007faa',
+          navy: '#232F3E',
+          cobalt: '#276cc6',
         },
-        'aws-font-color-white': {
-          light: '#ffffff',
-          dark:'#ececec',
+        'aws-gray': {
+          DEFAULT: '#757575',
+          slate: '#5b5b5b',
+          grayish: '#6b7280',
+          ash: '#909193',
+          french: '#9ca3af',
+          light: '#cacaca',
+          ice: '#e5e7eb',
         },
-        'aws-ui-color': {
-          dark: '#151515',
+        'aws-black': {
+          DEFAULT: '#000000',
+          jet: '#151515',
+          smoke: '#171717',
+          graphite: '#212121',
         },
-        'aws-paper': {
-          light: '#f1f3f3',
-          dark: '#212121',
-        },
-        red: '#dc2626',
-        'light-red': '#fee2e2',
-        yellow: '#f59e0b',
-        'light-yellow': '#fef9c3',
-        'dark-gray': '#6b7280',
-        gray: '#9ca3af',
-        'light-gray': '#e5e7eb',
       },
     },
   },

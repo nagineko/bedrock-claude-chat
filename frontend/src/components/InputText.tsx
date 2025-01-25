@@ -20,10 +20,10 @@ const InputText: React.FC<Props> = (props) => {
         type={props.type ?? 'text'}
         className={twMerge(
           'peer h-9 rounded border p-1 dark:[color-scheme:dark]',
-          'dark:bg-aws-ui-color-dark dark:placeholder-aws-font-color-gray dark:text-aws-font-color-dark',
+          'dark:bg-aws-black-jet dark:placeholder-aws-gray-ash dark:text-aws-gray-light',
           props.errorMessage
-            ? 'border-2 border-red'
-            : 'border-aws-font-color-light/50 dark:border-aws-font-color-dark/50'
+            ? 'border-2 border-aws-red'
+            : 'border-aws-blue-navy/50 dark:border-aws-gray-light/50'
         )}
         disabled={props.disabled}
         value={props.value}
@@ -37,17 +37,17 @@ const InputText: React.FC<Props> = (props) => {
           className={twMerge(
             'order-first text-sm peer-focus:font-semibold peer-focus:italic',
             props.errorMessage
-              ? 'font-bold text-red'
-              : 'text-dark-gray dark:text-light-gray peer-focus:text-aws-font-color-light dark:peer-focus:text-aws-font-color-dark'
+              ? 'font-bold text-aws-red'
+              : 'text-aws-gray-grayish dark:text-aws-gray-ice peer-focus:text-aws-blue-navy dark:peer-focus:text-aws-gray-light'
           )}>
           {props.label}
         </div>
       )}
       {props.hint && !props.errorMessage && (
-        <div className="mt-0.5 text-xs text-gray dark:text-aws-font-color-dark">{props.hint}</div>
+        <div className="mt-0.5 text-xs text-aws-gray-french dark:text-aws-gray-light">{props.hint}</div>
       )}
       {props.errorMessage && (
-        <div className="mt-0.5 text-xs text-red ">{props.errorMessage}</div>
+        <div className="mt-0.5 text-xs text-aws-red ">{props.errorMessage}</div>
       )}
     </div>
   );

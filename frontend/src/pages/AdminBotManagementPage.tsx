@@ -116,19 +116,19 @@ const AdminBotManagementPage: React.FC = () => {
                 <div className="mt-3 flex flex-col gap-1">
                   <div className="text-lg font-bold">{bot?.title}</div>
                   {bot?.description ? (
-                    <div className="text-sm text-aws-font-color-light/50 dark:text-aws-font-color-dark">
+                    <div className="text-sm text-aws-blue-navy/50 dark:text-aws-gray-light">
                       {bot?.description}
                     </div>
                   ) : (
-                    <div className="text-sm font-light italic text-aws-font-color-light/50 dark:text-aws-font-color-dark">
+                    <div className="text-sm font-light italic text-aws-blue-navy/50 dark:text-aws-gray-light">
                       {t('bot.label.noDescription')}
                     </div>
                   )}
 
-                  <div className="flex items-center text-sm text-dark-gray dark:text-light-gray">
+                  <div className="flex items-center text-sm text-aws-gray-grayish dark:text-aws-gray-ice">
                     {t('admin.botManagement.label.sharedUrl')}:
                     <div
-                      className="flex cursor-pointer items-center text-aws-sea-blue-light dark:text-aws-sea-blue-dark underline hover:text-aws-sea-blue-hover-light dark:hover:text-aws-sea-blue-hover-dark"
+                      className="flex cursor-pointer items-center text-aws-blue-teal dark:text-aws-gray underline hover:text-aws-blue-deepteal dark:hover:text-aws-gray-slate"
                       onClick={() => {
                         window.open(getBotUrl(bot?.id ?? ''), '_blank');
                       }}>
@@ -152,14 +152,14 @@ const AdminBotManagementPage: React.FC = () => {
                     {t('bot.label.knowledge')}
                   </div>
                   {!hasSourceUrls && !hasS3Urls && !hasFiles && (
-                    <div className="italic text-dark-gray dark:text-light-gray">
+                    <div className="italic text-aws-gray-grayish dark:text-aws-gray-ice">
                       {t('admin.botManagement.label.noKnowledge')}
                     </div>
                   )}
 
                   {hasSourceUrls && (
                     <div>
-                      <div className="text-sm text-dark-gray dark:text-light-gray">
+                      <div className="text-sm text-aws-gray-grayish dark:text-aws-gray-ice">
                         {t('bot.label.url')}
                       </div>
                       <div className="flex w-full flex-col gap-1">
@@ -172,7 +172,7 @@ const AdminBotManagementPage: React.FC = () => {
                               value={url}
                             />
                             <ButtonIcon
-                              className="text-aws-sea-blue-light dark:text-aws-sea-blue-dark"
+                              className="text-aws-blue-teal dark:text-aws-gray"
                               onClick={() => {
                                 window.open(url, '_blank');
                               }}>
@@ -186,14 +186,14 @@ const AdminBotManagementPage: React.FC = () => {
 
                   {hasFiles && (
                     <div>
-                      <div className="text-sm text-dark-gray dark:text-light-gray">
+                      <div className="text-sm text-aws-gray-grayish dark:text-aws-gray-ice">
                         {t('bot.label.file')}
                       </div>
                       <div className="flex w-full flex-col gap-1">
                         {bot?.knowledge.filenames.map((filename, idx) => (
                           <div
                             key={idx}
-                            className="rounded border border-gray p-1 py-1.5">
+                            className="rounded border border-aws-gray-french p-1 py-1.5">
                             <div className="flex items-center justify-between gap-2">
                               <div className="flex items-center gap-2 break-all px-1">
                                 <PiFile className="w-5" />
@@ -208,7 +208,7 @@ const AdminBotManagementPage: React.FC = () => {
 
                   {hasS3Urls && (
                     <div>
-                      <div className="text-sm text-dark-gray dark:text-light-gray">
+                      <div className="text-sm text-aws-gray-grayish dark:text-aws-gray-ice">
                         {t('bot.label.s3url')}
                       </div>
                       <div className="flex w-full flex-col gap-1">
@@ -244,7 +244,7 @@ const AdminBotManagementPage: React.FC = () => {
                 </div>
 
                 {!botPublication && (
-                  <div className="italic text-dark-gray dark:text-light-gray">
+                  <div className="italic text-aws-gray-grayish dark:text-aws-gray-ice">
                     {t('admin.botManagement.label.notPublishApi')}
                   </div>
                 )}
@@ -290,7 +290,7 @@ const AdminBotManagementPage: React.FC = () => {
                       <div className="text-base font-bold">
                         {t('bot.apiSettings.label.apiKeys')}
                       </div>
-                      <div className="text-sm text-aws-font-color-light/50 dark:text-aws-font-color-dark">
+                      <div className="text-sm text-aws-blue-navy/50 dark:text-aws-gray-light">
                         {t('bot.apiSettings.help.apiKeys')}
                       </div>
 
@@ -319,11 +319,11 @@ const AdminBotManagementPage: React.FC = () => {
                       <div className="text-base font-bold">
                         {t('bot.apiSettings.label.usagePlan')}
                       </div>
-                      <div className="text-sm text-aws-font-color-light/50 dark:text-aws-font-color-dark">
+                      <div className="text-sm text-aws-blue-navy/50 dark:text-aws-gray-light">
                         {t('bot.apiSettings.help.usagePlan')}
                       </div>
 
-                      <div className="mt-1 rounded border border-aws-font-color-light/50 dark:border-aws-font-color-dark/50 p-2">
+                      <div className="mt-1 rounded border border-aws-blue-navy/50 dark:border-aws-gray-light/50 p-2">
                         <div className="flex text-sm">
                           {t('bot.apiSettings.item.throttling')}:
                           <div className="ml-1 font-bold">
@@ -360,7 +360,7 @@ const AdminBotManagementPage: React.FC = () => {
                           </ul>
                         )}
 
-                        <div className="my-2 border-t border-aws-font-color-light/50 dark:border-aws-font-color-dark/50"></div>
+                        <div className="my-2 border-t border-aws-blue-navy/50 dark:border-aws-gray-light/50"></div>
 
                         <div className="flex text-sm">
                           {t('bot.apiSettings.item.quota')}:
@@ -395,7 +395,7 @@ const AdminBotManagementPage: React.FC = () => {
                         <div className="text-base font-bold">
                           {t('bot.apiSettings.label.allowOrigins')}
                         </div>
-                        <div className="text-sm text-aws-font-color-light/50 dark:border-aws-font-color-dark/50">
+                        <div className="text-sm text-aws-blue-navy/50 dark:border-aws-gray-light/50">
                           <div>{t('bot.apiSettings.help.allowOrigins')}</div>
                         </div>
                       </div>
@@ -410,7 +410,7 @@ const AdminBotManagementPage: React.FC = () => {
                               value={url}
                             />
                             <ButtonIcon
-                              className="text-aws-sea-blue-light dark:text-aws-sea-blue-dark"
+                              className="text-aws-blue-teal dark:text-aws-gray"
                               onClick={() => {
                                 window.open(url, '_blank');
                               }}>
@@ -431,7 +431,7 @@ const AdminBotManagementPage: React.FC = () => {
 
               {!isLoadingBotPublication && botPublication && (
                 <Button
-                  className="bg-red"
+                  className="bg-aws-red"
                   onClick={() => {
                     setIsOpenDeleteApiDialog(true);
                   }}>

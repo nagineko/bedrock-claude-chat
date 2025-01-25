@@ -41,19 +41,19 @@ const UploadedFileText: React.FC<Props> = (props) => {
       )}
       onClick={() => onClick()}>
       <div className="flex w-full ">
-        <div className="w-full rounded-tl-lg border-l border-t border-gray bg-aws-paper-light dark:bg-aws-paper-dark "></div>
+        <div className="w-full rounded-tl-lg border-l border-t border-aws-gray-french bg-aws-white-smoke dark:bg-aws-black-graphite "></div>
         <svg
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
           className="block size-4 shrink-0 drop-shadow">
           <path
             d="M0 0L16 16H0V0Z"
-            className="fill-aws-paper-light dark:fill-aws-paper-dark stroke-gray"
+            className="fill-aws-white-smoke dark:fill-aws-black-graphite stroke-aws-gray-french"
             strokeWidth="0.5"></path>
         </svg>
       </div>
-      <div className="flex h-20 items-center justify-center rounded-b-lg border-x border-b border-gray bg-aws-paper-light dark:bg-aws-paper-dark p-2 ">
-        <div className="w-16 break-words text-center text-xs font-bold text-dark-gray dark:text-light-gray">
+      <div className="flex h-20 items-center justify-center rounded-b-lg border-x border-b border-aws-gray-french bg-aws-white-smoke dark:bg-aws-black-graphite p-2 ">
+        <div className="w-16 break-words text-center text-xs font-bold text-aws-gray-grayish dark:text-aws-gray-ice">
           {shortFileName}
         </div>
       </div>

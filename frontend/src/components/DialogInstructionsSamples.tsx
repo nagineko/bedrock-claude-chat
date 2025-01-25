@@ -13,7 +13,7 @@ const PromptSample: React.FC<PromptSampleProps> = (props) => {
   return (
     <div>
       <div>{props.title}</div>
-      <div className="rounded bg-light-gray dark:bg-aws-ui-color-dark p-2 text-aws-font-color-light dark:text-aws-font-color-dark">
+      <div className="rounded bg-aws-gray-ice dark:bg-aws-black-jet p-2 text-aws-blue-navy dark:text-aws-gray-light">
         {props.prompt.split('\n').map((s, idx) => (
           <div key={idx}>{s}</div>
         ))}
@@ -58,7 +58,7 @@ const DialogInstructionsSamples: React.FC<Props> = (props) => {
             href={t('bot.samples.anthropicLibrary.url')}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-aws-sea-blue-light dark:text-aws-font-color-blue underline hover:text-aws-sea-blue-hover-light dark:hover:text-aws-sea-blue-hover-dark">
+            className="text-aws-blue-teal dark:text-aws-blue-cobalt underline hover:text-aws-blue-deepteal dark:hover:text-aws-gray-slate">
             {t('bot.samples.anthropicLibrary.title')}
           </a>
         </div>

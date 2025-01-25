@@ -26,8 +26,8 @@ const ButtonFileChoose: React.FC<Props> = (props) => {
         props.className,
         'flex  items-center justify-center whitespace-nowrap rounded-lg  hover:shadow hover:brightness-75',
         props.icon
-          ? 'rounded-full p-2 text-xl text-aws-sea-blue-light dark:text-aws-sea-blue-dark'
-          : 'border dark:border-aws-ui-color-dark bg-aws-sea-blue-light dark:bg-aws-ui-color-dark p-1 px-3 text-aws-font-color-white-light dark:text-aws-font-color-white-dark',
+          ? 'rounded-full p-2 text-xl text-aws-blue-teal dark:text-aws-gray'
+          : 'border dark:border-aws-black-jet bg-aws-blue-teal dark:bg-aws-black-jet p-1 px-3 text-aws-white dark:text-aws-white-silver',
         props.disabled ? 'opacity-30 ' : 'cursor-pointer'
       )}>
       {props.children}

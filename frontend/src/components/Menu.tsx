@@ -44,7 +44,7 @@ const Menu: React.FC<Props> = (props) => {
     <>
       <Button
         ref={buttonRef}
-        className="relative bg-aws-squid-ink-light dark:bg-aws-squid-ink-dark"
+        className="relative bg-aws-blue-navy dark:bg-aws-black-smoke"
         text
         icon={<PiList />}
         onClick={() => {
@@ -56,9 +56,9 @@ const Menu: React.FC<Props> = (props) => {
       {isOpen && (
         <div
           ref={menuRef}
-          className="absolute bottom-10 left-2 w-60 rounded border border-aws-font-color-white-light dark:border-aws-font-color-white-dark bg-aws-sea-blue-light dark:bg-aws-ui-color-dark text-aws-font-color-white-light dark:text-aws-font-color-white-dark">
+          className="absolute bottom-10 left-2 w-60 rounded border border-aws-white dark:border-aws-white-silver bg-aws-blue-teal dark:bg-aws-black-jet text-aws-white dark:text-aws-white-silver">
           <div
-            className="flex w-full cursor-pointer items-center p-2 hover:bg-aws-sea-blue-hover-light dark:hover:bg-aws-paper-dark"
+            className="flex w-full cursor-pointer items-center p-2 hover:bg-aws-blue-deepteal dark:hover:bg-aws-black-graphite"
             onClick={() => {
               setIsOpen(false);
               props.onSelectLanguage();
@@ -67,7 +67,7 @@ const Menu: React.FC<Props> = (props) => {
             {t('button.language')}
           </div>
           <div
-            className="flex w-full cursor-pointer items-center p-2 hover:bg-aws-sea-blue-hover-light dark:hover:bg-aws-paper-dark"
+            className="flex w-full cursor-pointer items-center p-2 hover:bg-aws-blue-deepteal dark:hover:bg-aws-black-graphite"
             onClick={() => {
               setIsOpen(false);
               props.onClearConversations();
@@ -76,7 +76,7 @@ const Menu: React.FC<Props> = (props) => {
             {t('button.clearConversation')}
           </div>
           <div
-            className="flex w-full cursor-pointer items-center border-t p-2 hover:bg-aws-sea-blue-hover-light dark:hover:bg-aws-paper-dark"
+            className="flex w-full cursor-pointer items-center border-t p-2 hover:bg-aws-blue-deepteal dark:hover:bg-aws-black-graphite"
             onClick={props.onSignOut}>
             <PiSignOut className="mr-2" />
             {t('button.signOut')}

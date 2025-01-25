@@ -39,7 +39,7 @@ export const Slider: FC<Props> = (props) => {
     <div className="flex flex-col">
       <label
         className={twMerge(
-          'text-sm text-dark-gray dark:text-light-gray',
+          'text-sm text-aws-gray-grayish dark:text-aws-gray-ice',
           props.errorMessage && 'border-red dark:border-red text-red dark:text-red'
         )}>
         {props.label}
@@ -62,8 +62,8 @@ export const Slider: FC<Props> = (props) => {
           className={twMerge(
             'peer h-9 w-16 rounded border p-1 text-center',
             props.errorMessage
-              ? 'dark:bg-aws-ui-color-dark border-2 border-red dark:text-aws-font-color-dark'
-              : 'dark:bg-aws-ui-color-dark border-aws-font-color-light/50 dark:border-aws-font-color-dark dark:text-aws-font-color-dark'
+              ? 'dark:bg-aws-black-jet border-2 border-red dark:text-aws-gray-light'
+              : 'dark:bg-aws-black-jet border-aws-blue-navy/50 dark:border-aws-gray-light dark:text-aws-gray-light'
           )}
           value={value}
           max={props.range.max}
@@ -73,10 +73,10 @@ export const Slider: FC<Props> = (props) => {
         />
       </div>
       {props.hint && !props.errorMessage && (
-        <span className={'mt-0.5 text-xs text-gray dark:text-aws-font-color-gray'}>{props.hint}</span>
+        <span className={'mt-0.5 text-xs text-aws-gray-french dark:text-aws-gray-ash'}>{props.hint}</span>
       )}
       {props.errorMessage && (
-        <div className="mt-0.5 text-xs text-red">{props.errorMessage}</div>
+        <div className="mt-0.5 text-xs text-aws-red">{props.errorMessage}</div>
       )}
     </div>
   );

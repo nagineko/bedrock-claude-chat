@@ -36,7 +36,7 @@ const GenerationConfig: React.FC<GenerationConfigProps> = ({
   const { t } = useTranslation();
   return (
     <div>
-      <div className="text-sm text-aws-font-color-light/50 dark:text-aws-font-color-dark">
+      <div className="text-sm text-aws-blue-navy/50 dark:text-aws-gray-light">
         {t('generationConfig.description')}
       </div>
       <div className="mt-2">

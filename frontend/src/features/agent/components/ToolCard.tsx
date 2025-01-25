@@ -175,7 +175,7 @@ const ToolCard: React.FC<ToolCardProps> = ({
           </span>
         )}
         {'text' in document.content && (
-          <div className="break-all line-clamp-2 dark:text-aws-font-color-dark">
+          <div className="break-all line-clamp-2 dark:text-aws-gray-light">
             {document.content.text}
           </div>
         )}
@@ -209,16 +209,16 @@ const ToolCard: React.FC<ToolCardProps> = ({
   return (
     <div className={twMerge('relative', className)}>
       <div
-        className="flex cursor-pointer items-center justify-between p-2 dark:text-aws-font-color-dark hover:bg-light-gray dark:hover:bg-aws-font-color-dark/10"
+        className="flex cursor-pointer items-center justify-between p-2 dark:text-aws-gray-light hover:bg-aws-gray-ice dark:hover:bg-aws-gray-light/10"
         onClick={handleToggleExpand}>
         <div className="flex items-center text-base">
           {status === 'running' && (
-            <PiCircleNotch className="mr-2 animate-spin text-aws-aqua" />
+            <PiCircleNotch className="mr-2 animate-spin text-aws-blue-cerulean" />
           )}
           {status === 'success' && (
-            <PiCheckCircle className="mr-2 text-aws-aqua" />
+            <PiCheckCircle className="mr-2 text-aws-blue-cerulean" />
           )}
-          {status === 'error' && <PiXCircle className="mr-2  text-red" />}
+          {status === 'error' && <PiXCircle className="mr-2  text-aws-red" />}
           <h3 className="">{getAgentName(name, t)}</h3>
         </div>
         <div>
@@ -240,7 +240,7 @@ const ToolCard: React.FC<ToolCardProps> = ({
             <div
               className="mt-2 flex cursor-pointer items-center text-sm"
               onClick={handleToggleInputExpand}>
-              <p className="font-bold dark:text-aws-font-color-dark">{t('agent.progressCard.toolInput')}</p>
+              <p className="font-bold dark:text-aws-gray-light">{t('agent.progressCard.toolInput')}</p>
               {isInputExpanded ? (
                 <PiCaretDown className="ml-2" />
               ) : (
@@ -251,7 +251,7 @@ const ToolCard: React.FC<ToolCardProps> = ({
             <div
               className={twMerge(
                 `overflow-hidden transition-all duration-300 ease-in-out`,
-                'dark:text-aws-font-color-dark',
+                'dark:text-aws-gray-light',
                 isInputExpanded ? 'max-h-full ' : 'max-h-0'
               )}>
               <div className="ml-4 mt-2 text-sm">
@@ -272,7 +272,7 @@ const ToolCard: React.FC<ToolCardProps> = ({
             <div
               className="mt-2 flex cursor-pointer items-center text-sm"
               onClick={handleToggleContentExpand}>
-              <p className="font-bold dark:text-aws-font-color-dark">{t('agent.progressCard.toolOutput')}</p>
+              <p className="font-bold dark:text-aws-gray-light">{t('agent.progressCard.toolOutput')}</p>
               {isContentExpanded ? (
                 <PiCaretDown className="ml-2" />
               ) : (
@@ -289,7 +289,7 @@ const ToolCard: React.FC<ToolCardProps> = ({
                 {displayDocuments.length == 1 && (
                   <div className="flex items-center space-x-2">
                     <a
-                      className="flex items-center cursor-pointer text-aws-sea-blue-light dark:text-aws-sea-blue-dark hover:text-aws-sea-blue-hover-light dark:hover:text-aws-sea-blue-hover-dark"
+                      className="flex items-center cursor-pointer text-aws-blue-teal dark:text-aws-gray hover:text-aws-blue-deepteal dark:hover:text-aws-gray-slate"
                       onClick={() => setViewingRelatedDocument(displayDocuments[0])}
                     >
                       <PiLinkBold />
@@ -302,7 +302,7 @@ const ToolCard: React.FC<ToolCardProps> = ({
                 {displayDocuments.length > 1 && displayDocuments.map((document, index) => (
                   <div key={document.sourceId} className="flex items-center space-x-2">
                     <a
-                      className="flex items-center cursor-pointer text-aws-sea-blue-light dark:text-aws-sea-blue-dark hover:text-aws-sea-blue-hover-light dark:hover:text-aws-sea-blue-hover-dark"
+                      className="flex items-center cursor-pointer text-aws-blue-teal dark:text-aws-gray hover:text-aws-blue-deepteal dark:hover:text-aws-gray-slate"
                       onClick={() => setViewingRelatedDocument(document)}
                     >
                       <div>{`[${index + 1}]`}</div>

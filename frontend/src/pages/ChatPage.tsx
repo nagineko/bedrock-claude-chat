@@ -438,19 +438,19 @@ const ChatPage: React.FC = () => {
       onDrop={endDnd}
       onDragEnd={endDnd}>
       <div className="flex-1 overflow-hidden">
-        <div className="sticky top-0 z-10 mb-1.5 flex h-14 w-full items-center justify-between border-b border-gray bg-aws-paper-light dark:bg-aws-paper-dark p-2">
+        <div className="sticky top-0 z-10 mb-1.5 flex h-14 w-full items-center justify-between border-b border-aws-gray-french bg-aws-white-smoke dark:bg-aws-black-graphite p-2">
           <div className="flex w-full justify-between">
             <div className="p-2">
               <div className="mr-10 font-bold">{pageTitle}</div>
-              <div className="text-xs font-thin text-dark-gray dark:text-light-gray">
+              <div className="text-xs font-thin text-aws-gray-grayish dark:text-aws-gray-ice">
                 {description}
               </div>
             </div>
 
             {isAvailabilityBot && (
               <div className="absolute -top-1 right-0 flex h-full items-center">
-                <div className="h-full bg-gradient-to-r from-transparent to-aws-paper-light dark:to-aws-paper-dark"></div>
-                <div className="flex items-center bg-aws-paper-light dark:bg-aws-paper-dark">
+                <div className="h-full bg-gradient-to-r from-transparent to-aws-white-smoke dark:to-aws-black-graphite"></div>
+                <div className="flex items-center bg-aws-white-smoke dark:bg-aws-black-graphite">
                   {bot?.owned && (
                     <StatusSyncBot
                       syncStatus={bot.syncStatus}
@@ -459,7 +459,7 @@ const ChatPage: React.FC = () => {
                   )}
                   <ButtonIcon onClick={onClickStar}>
                     {bot?.isPinned ? (
-                      <PiStarFill className="text-aws-aqua" />
+                      <PiStarFill className="text-aws-blue-cerulean" />
                     ) : (
                       <PiStar />
                     )}
@@ -491,7 +491,7 @@ const ChatPage: React.FC = () => {
             )}
           </div>
           {getPostedModel() && (
-            <div className="absolute right-2 top-10 text-xs text-dark-gray dark:text-light-gray">
+            <div className="absolute right-2 top-10 text-xs text-aws-gray-grayish dark:text-aws-gray-ice">
               model: {getPostedModel()}
             </div>
           )}
@@ -518,7 +518,7 @@ const ChatPage: React.FC = () => {
                     <div
                       key={idx}
                       className={`${
-                        message.role === 'assistant' ? 'bg-aws-squid-ink-light/5 dark:bg-aws-squid-ink-dark/35' : ''
+                        message.role === 'assistant' ? 'bg-aws-blue-navy/5 dark:bg-aws-black-smoke/35' : ''
                       }`}>
                       <ChatMessageWithRelatedDocuments
                         chatContent={message}
@@ -531,14 +531,14 @@ const ChatPage: React.FC = () => {
                           }
                         }}
                       />
-                      <div className="w-full border-b border-aws-squid-ink-light/10 dark:border-aws-squid-ink-dark/10"></div>
+                      <div className="w-full border-b border-aws-blue-navy/10 dark:border-aws-black-smoke/10"></div>
                     </div>
                   ))}
                 </>
               )}
               {hasError && (
                 <div className="mb-12 mt-2 flex flex-col items-center">
-                  <div className="flex items-center font-bold text-red">
+                  <div className="flex items-center font-bold text-aws-red">
                     <PiWarningCircleFill className="mr-1 text-2xl" />
                     {errorDetail ?? t('error.answerResponse')}
                   </div>
@@ -577,7 +577,7 @@ const ChatPage: React.FC = () => {
             {bot?.conversationQuickStarters?.map((qs, idx) => (
               <div
                 key={idx}
-                className="w-[calc(33.333%-0.5rem)] cursor-pointer rounded-2xl border border-aws-squid-ink-light/20 dark:border-aws-squid-ink-dark/20 bg-white p-2  text-sm text-dark-gray dark:text-light-gray  hover:shadow-lg hover:shadow-gray"
+                className="w-[calc(33.333%-0.5rem)] cursor-pointer rounded-2xl border border-aws-blue-navy/20 dark:border-aws-black-smoke/20 bg-white p-2  text-sm text-aws-gray-grayish dark:text-aws-gray-ice  hover:shadow-lg hover:shadow-aws-gray-french"
                 onClick={() => {
                   onSend(qs.example);
                 }}>

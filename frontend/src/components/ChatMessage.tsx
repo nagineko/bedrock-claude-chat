@@ -151,7 +151,7 @@ const ChatMessage: React.FC<Props> = (props) => {
 
       <div className="order-first col-span-12 flex lg:order-none lg:col-span-8 lg:col-start-3">
         {chatContent?.role === 'user' && (
-          <div className="h-min rounded bg-aws-sea-blue-light dark:bg-aws-sea-blue-dark p-2 text-xl text-white">
+          <div className="h-min rounded bg-aws-blue-teal dark:bg-aws-gray p-2 text-xl text-white">
             <PiUserFill />
           </div>
         )}
@@ -312,7 +312,7 @@ const ChatMessage: React.FC<Props> = (props) => {
         <div className="flex flex-col items-end lg:items-start">
           {chatContent?.role === 'user' && !isEdit && (
             <ButtonIcon
-              className="text-dark-gray dark:text-light-gray"
+              className="text-aws-gray-grayish dark:text-aws-gray-ice"
               onClick={() => {
                 setChangedContent(chatContent.content[firstTextContent].body);
                 setIsEdit(true);
@@ -323,7 +323,7 @@ const ChatMessage: React.FC<Props> = (props) => {
           {chatContent?.role === 'assistant' && (
             <div className="flex">
               <ButtonIcon
-                className="text-dark-gray dark:text-light-gray"
+                className="text-aws-gray-grayish dark:text-aws-gray-ice"
                 onClick={() => setIsFeedbackOpen(true)}>
                 {chatContent.feedback && !chatContent.feedback.thumbsUp ? (
                   <PiThumbsDownFill />
@@ -332,7 +332,7 @@ const ChatMessage: React.FC<Props> = (props) => {
                 )}
               </ButtonIcon>
               <ButtonCopy
-                className="text-dark-gray dark:text-light-gray"
+                className="text-aws-gray-grayish dark:text-aws-gray-ice"
                 text={chatContent.content[0].body}
               />
             </div>

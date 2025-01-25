@@ -36,7 +36,7 @@ const DialogConfirmDeleteChat: React.FC<Props> = (props) => {
           onClick={() => {
             props.onDelete(props.target?.id ?? '');
           }}
-          className="bg-red p-2 text-aws-font-color-white-light dark:text-aws-font-color-white-dark">
+          className="bg-aws-red p-2 text-aws-white dark:text-aws-white-silver">
           {t('button.delete')}
         </Button>
       </div>

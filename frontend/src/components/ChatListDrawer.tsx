@@ -289,7 +289,7 @@ const ChatListDrawer: React.FC<Props> = (props) => {
 
   return (
     <>
-      <div className="relative h-full overflow-y-auto bg-aws-squid-ink-light dark:bg-aws-ui-color-dark scrollbar-thin scrollbar-track-white scrollbar-thumb-aws-squid-ink-light/30 dark:scrollbar-thumb-aws-ui-color-dark/30">
+      <div className="relative h-full overflow-y-auto bg-aws-blue-navy dark:bg-aws-black-jet scrollbar-thin scrollbar-track-white scrollbar-thumb-aws-blue-navy/30 dark:scrollbar-thumb-aws-black-jet/30">
         <nav
           className={`lg:visible lg:w-64 ${
             opened ? 'visible w-64' : 'invisible w-0'
@@ -388,7 +388,7 @@ const ChatListDrawer: React.FC<Props> = (props) => {
           <div
             className={`${
               opened ? 'w-64' : 'w-0'
-            } fixed bottom-0 flex h-12 items-center justify-between p-2 border-t bg-aws-squid-ink-light dark:bg-aws-ui-color-dark transition-width lg:w-64`}>
+            } fixed bottom-0 flex h-12 items-center justify-between p-2 border-t bg-aws-blue-navy dark:bg-aws-black-jet transition-width lg:w-64`}>
             <Menu
               onSignOut={props.onSignOut}
               onSelectLanguage={props.onSelectLanguage}
@@ -423,7 +423,7 @@ const ChatListDrawer: React.FC<Props> = (props) => {
           <PiX />
         </ButtonIcon>
         <div
-          className="fixed z-40 h-dvh w-screen bg-dark-gray/90"
+          className="fixed z-40 h-dvh w-screen bg-aws-gray-grayish/90"
           onClick={switchOpen}></div>
       </div>
     </>

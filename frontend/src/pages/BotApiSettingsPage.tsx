@@ -313,11 +313,11 @@ const BotApiSettingsPage: React.FC = () => {
                   <div className="flex flex-col gap-1">
                     <div className="text-lg font-bold">{myBot?.title}</div>
                     {myBot?.description ? (
-                      <div className="text-sm text-aws-font-color-light/50 dark:text-aws-font-color-dark">
+                      <div className="text-sm text-aws-blue-navy/50 dark:text-aws-gray-light">
                         {myBot?.description}
                       </div>
                     ) : (
-                      <div className="text-sm font-light italic text-aws-font-color-light/50 dark:text-aws-font-color-dark">
+                      <div className="text-sm font-light italic text-aws-blue-navy/50 dark:text-aws-gray-light">
                         {t('bot.label.noDescription')}
                       </div>
                     )}
@@ -360,7 +360,7 @@ const BotApiSettingsPage: React.FC = () => {
                           {t('bot.apiSettings.label.endpoint')}
                           <Help message={t('bot.apiSettings.help.endpoint')} />
                         </div>
-                        <div className="text-sm text-aws-font-color-light/50 dark:text-aws-font-color-dark">
+                        <div className="text-sm text-aws-blue-navy/50 dark:text-aws-gray-light">
                           {t('bot.apiSettings.label.endpoint')}
                         </div>
                         <div className="flex">
@@ -376,7 +376,7 @@ const BotApiSettingsPage: React.FC = () => {
                         <div className="text-lg font-bold">
                           {t('bot.apiSettings.label.apiKeys')}
                         </div>
-                        <div className="text-sm text-aws-font-color-light/50 dark:text-aws-font-color-dark">
+                        <div className="text-sm text-aws-blue-navy/50 dark:text-aws-gray-light">
                           {t('bot.apiSettings.help.apiKeys')}
                         </div>
 
@@ -403,7 +403,7 @@ const BotApiSettingsPage: React.FC = () => {
                       <div className="text-lg font-bold">
                         {t('bot.apiSettings.label.usagePlan')}
                       </div>
-                      <div className="text-sm text-aws-font-color-light/50 dark:text-aws-font-color-dark">
+                      <div className="text-sm text-aws-blue-navy/50 dark:text-aws-gray-light">
                         {t('bot.apiSettings.help.usagePlan')}
                       </div>
 
@@ -481,7 +481,7 @@ const BotApiSettingsPage: React.FC = () => {
                             />
                           </div>
                           {!errorMessages['requestLimit'] && (
-                            <div className="mt-0.5 text-xs text-gray">
+                            <div className="mt-0.5 text-xs text-aws-gray-french">
                               {t('bot.apiSettings.help.requestLimit')}
                             </div>
                           )}
@@ -491,7 +491,7 @@ const BotApiSettingsPage: React.FC = () => {
                         <div className="text-lg font-bold">
                           {t('bot.apiSettings.label.allowOrigins')}
                         </div>
-                        <div className="text-sm text-aws-font-color-light/50 dark:text-aws-font-color-dark">
+                        <div className="text-sm text-aws-blue-navy/50 dark:text-aws-gray-light">
                           <div>{t('bot.apiSettings.help.allowOrigins')}</div>
                           <div>
                             {t('bot.apiSettings.help.allowOriginsExample')}
@@ -514,7 +514,7 @@ const BotApiSettingsPage: React.FC = () => {
                                 errorMessage={errorMessages[`origins${idx}`]}
                               />
                               <ButtonIcon
-                                className="text-red"
+                                className="text-aws-red"
                                 disabled={disabledCreate}
                                 onClick={() => {
                                   onClickRemoveOrigin(idx);
@@ -563,7 +563,7 @@ const BotApiSettingsPage: React.FC = () => {
                   )}
                 {(hasCreated || hasFailedDeploy) && (
                   <Button
-                    className="bg-red"
+                    className="bg-aws-red"
                     onClick={() => {
                       setIsOpenDeleteApiDialog(true);
                     }}>
