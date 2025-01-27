@@ -63,7 +63,7 @@ const RelatedDocumentLink: React.FC<{
         className={twMerge(
           'mx-0.5 ',
           props.relatedDocument != null
-            ? 'cursor-pointer text-aws-blue-teal dark:text-aws-gray hover:text-aws-blue-deepteal dark:hover:text-aws-gray-slate'
+            ? 'cursor-pointer text-aws-blue dark:text-aws-gray hover:text-aws-blue-deepteal dark:hover:text-aws-gray-slate'
             : 'cursor-not-allowed text-aws-gray-french'
         )}
         onClick={() => {

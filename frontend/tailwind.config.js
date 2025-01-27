@@ -27,9 +27,8 @@ export default {
           DEFAULT: '#f59e0b',
         },
         'aws-blue': {
-          DEFAULT: '#',
+          DEFAULT: '#005276',
           deepteal: '#003550',
-          teal: '#005276',
           cerulean: '#007faa',
           navy: '#232F3E',
           cobalt: '#276cc6',

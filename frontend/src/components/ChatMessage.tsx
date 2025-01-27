@@ -151,7 +151,7 @@ const ChatMessage: React.FC<Props> = (props) => {
 
       <div className="order-first col-span-12 flex lg:order-none lg:col-span-8 lg:col-start-3">
         {chatContent?.role === 'user' && (
-          <div className="h-min rounded bg-aws-blue-teal dark:bg-aws-gray p-2 text-xl text-white">
+          <div className="h-min rounded bg-aws-blue dark:bg-aws-gray p-2 text-xl text-white">
             <PiUserFill />
           </div>
         )}

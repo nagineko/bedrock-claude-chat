@@ -24,7 +24,7 @@ const Button = forwardRef<HTMLButtonElement, Props>((props, ref) => {
         props.outlined && 'border-aws-blue-navy/50 dark:border-aws-gray-ash/50 hover:bg-white dark:hover:bg-aws-black-jet dark:text-aws-gray-light',
         !props.text &&
           !props.outlined &&
-          'bg-aws-blue-teal dark:bg-aws-black-jet dark:border-aws-black-jet text-aws-white dark:text-aws-white-silver',
+          'bg-aws-blue dark:bg-aws-black-jet dark:border-aws-black-jet text-aws-white dark:text-aws-white-silver',
         props.disabled || props.loading ? 'opacity-30' : 'hover:brightness-75',
         props.className
       )}

@@ -29,7 +29,7 @@ const Toggle: React.FC<Props> = (props) => {
         />
         <div
           className={twMerge(
-            "peer h-6 w-11 rounded-full bg-aws-gray-ice dark:bg-aws-gray-ash after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-aws-gray-french after:bg-white dark:after:bg-aws-black-jet after:transition-all after:content-[''] peer-checked:bg-aws-blue-teal dark:peer-checked:bg-white peer-checked:after:translate-x-full peer-checked:after:border-white rtl:peer-checked:after:-translate-x-full",
+            "peer h-6 w-11 rounded-full bg-aws-gray-ice dark:bg-aws-gray-ash after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-aws-gray-french after:bg-white dark:after:bg-aws-black-jet after:transition-all after:content-[''] peer-checked:bg-aws-blue dark:peer-checked:bg-white peer-checked:after:translate-x-full peer-checked:after:border-white rtl:peer-checked:after:-translate-x-full",
             props.disabled ? 'opacity-20' : ''
           )}></div>
         {props.label && (

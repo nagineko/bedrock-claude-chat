@@ -16,9 +16,9 @@ type Props = BaseProps & {
 };
 
 const variantStyles: Record<RadioButtonVariant, string> = {
-  default: 'border-aws-blue-navy/50 dark:border-aws-gray-light/50 after:bg-aws-blue-teal dark:after:bg-aws-gray',
-  outlined: 'border-gray-300 dark:border-aws-gray-light after:bg-aws-blue-teal dark:after:bg-aws-gray',
-  colored: 'border-aws-blue-teal dark:border-aws-gray after:bg-aws-blue-teal dark:after:bg-aws-gray',
+  default: 'border-aws-blue-navy/50 dark:border-aws-gray-light/50 after:bg-aws-blue dark:after:bg-aws-gray',
+  outlined: 'border-gray-300 dark:border-aws-gray-light after:bg-aws-blue dark:after:bg-aws-gray',
+  colored: 'border-aws-blue dark:border-aws-gray after:bg-aws-blue dark:after:bg-aws-gray',
 };
 
 const RadioButton: React.FC<Props> = ({
@@ -62,7 +62,7 @@ const RadioButton: React.FC<Props> = ({
               'after:absolute after:left-1/2 after:top-1/2 after:h-3 after:w-3 after:rounded-full after:-translate-x-1/2 after:-translate-y-1/2',
               'after:transition-all after:content-[""]',
               variantStyles[variant],
-              'dark:bg-aws-black-jet peer-checked:border-aws-blue-teal dark:after:bg-white dark:peer-checked:border-white peer-checked:after:opacity-100',
+              'dark:bg-aws-black-jet peer-checked:border-aws-blue dark:after:bg-white dark:peer-checked:border-white peer-checked:after:opacity-100',
               'after:opacity-0',
               disabled ? 'opacity-30' : 'hover:brightness-90'
             )}

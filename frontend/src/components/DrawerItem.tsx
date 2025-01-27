@@ -19,7 +19,7 @@ const DrawerItem: React.FC<Props> = (props) => {
       className={twMerge(
         'group mx-2 my-1 flex h-10 items-center  rounded px-2',
         props.isActive ?? true
-          ? 'bg-aws-blue-teal dark:bg-aws-gray'
+          ? 'bg-aws-blue dark:bg-aws-gray'
           : 'hover:bg-aws-blue-deepteal dark:hover:bg-aws-black-graphite',
         props.className
       )}
@@ -34,7 +34,7 @@ const DrawerItem: React.FC<Props> = (props) => {
               className={twMerge(
                 'absolute inset-y-0 right-0 w-8 bg-gradient-to-l',
                 props.isActive
-                  ? 'from-aws-blue-teal dark:from-aws-gray'
+                  ? 'from-aws-blue dark:from-aws-gray'
                   : 'from-aws-blue-navy dark:from-aws-black-smoke group-hover:from-aws-blue-deepteal dark:group-hover:from-aws-black-graphite'
               )}
             />

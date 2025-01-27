@@ -46,7 +46,7 @@ const StatusSyncBot: React.FC<Props> = (props) => {
           <>
             {props.onClickError ? (
               <a
-                className="flex cursor-pointer items-center gap-0.5 border-b font-semibold text-aws-blue-teal dark:text-aws-gray hover:font-bold"
+                className="flex cursor-pointer items-center gap-0.5 border-b font-semibold text-aws-blue dark:text-aws-gray hover:font-bold"
                 onClick={props.onClickError}>
                 {t('bot.label.syncStatus.fail')}
               </a>

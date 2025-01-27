@@ -172,7 +172,7 @@ const KnowledgeFileUploader: React.FC<Props> = (props) => {
         onDragOver={onDragOver}
         onDrop={onDrop}
         className={twMerge(
-          'flex h-full w-full flex-col items-center justify-center gap-3 rounded border-4 border-gray text-aws-gray-grayish dark:text-aws-gray-ice',
+          'flex h-full w-full flex-col items-center justify-center gap-3 rounded border-4 border-aws-gray-french text-aws-gray-grayish dark:text-aws-gray-ice',
           props.disabled && 'opacity-50 cursor-not-allowed',
           props.className
         )}>
@@ -196,7 +196,7 @@ const KnowledgeFileUploader: React.FC<Props> = (props) => {
 
       <div className="flex flex-col gap-1">
         {props.files.map((file, idx) => (
-          <div key={idx} className="rounded border border-gray bg-white p-1 ">
+          <div key={idx} className="rounded border border-aws-gray-french bg-white p-1 ">
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-2 break-all px-1">
                 <PiFile className="w-5" />

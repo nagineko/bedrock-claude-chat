@@ -56,7 +56,7 @@ const Menu: React.FC<Props> = (props) => {
       {isOpen && (
         <div
           ref={menuRef}
-          className="absolute bottom-10 left-2 w-60 rounded border border-aws-white dark:border-aws-white-silver bg-aws-blue-teal dark:bg-aws-black-jet text-aws-white dark:text-aws-white-silver">
+          className="absolute bottom-10 left-2 w-60 rounded border border-aws-white dark:border-aws-white-silver bg-aws-blue dark:bg-aws-black-jet text-aws-white dark:text-aws-white-silver">
           <div
             className="flex w-full cursor-pointer items-center p-2 hover:bg-aws-blue-deepteal dark:hover:bg-aws-black-graphite"
             onClick={() => {

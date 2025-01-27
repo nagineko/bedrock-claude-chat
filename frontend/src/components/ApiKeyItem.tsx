@@ -98,7 +98,7 @@ const ApiKeyItem: React.FC<Props> = (props) => {
                 <ButtonCopy text={botApiKey?.value ?? ''} className="-my-2" />
                 <Button
                   text
-                  className="-m-2 font-bold text-aws-blue-teal dark:text-aws-gray"
+                  className="-m-2 font-bold text-aws-blue dark:text-aws-gray"
                   onClick={() => {
                     setIsHideKey(!isHideKey);
                   }}>
